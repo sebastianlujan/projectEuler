@@ -13,6 +13,11 @@ def sum(z):
 print(sum(1000))
 #233168 = 10^3
 
+#The same algorithm in functional programming
+def f(x):
+	return sum([y for y in range(3,x) if y % 3 == 0 or y % 5 == 0] )
+print(f(1000))
+
 #Elegant Mathematical way using n*(n+1)/2
 def sgauss(n,m):
 	p = n//m
