@@ -11,4 +11,12 @@ def sum(z):
 	return s
 
 print(sum(1000))
-#233168
+#233168 = 10^3
+
+#Elegant Mathematical way using n*(n+1)/2
+def sgauss(n,m):
+	p = n//m
+	return m*p*(p+1)//2
+
+n = 999
+print( sgauss(n,3) + sgauss(n,5) - sgauss(n, 15)  )
