@@ -21,7 +21,7 @@ def f(x):
 print(f(1000))
 
 
-# One line COnsole solution
+# One line Console solution
 #>> 
 sum( x for x in range(3,1000) if y % 3 == 0 or y % 5 == 0)) 
 
