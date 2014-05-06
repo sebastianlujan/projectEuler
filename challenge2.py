@@ -19,12 +19,10 @@ def fib(n):
 
 print(fib(4000000))
 
-#Solution 2 #without fib mmod 2
-
-# Elegant mathematical solution, using even terms series
-
 
 #Solution 2
+#An Elegant mathematical solution, using even terms series
+
 def fib(n):
 	if n < 2:
 		return n
