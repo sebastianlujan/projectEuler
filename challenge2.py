@@ -35,7 +35,7 @@ print(fib(4000000))
 # fibo = 3*fibo+2*fnext
 
 
-
+#Solution 2
 def fib(n):
 	if n < 2:
 		return n
