@@ -51,7 +51,9 @@ print(fib(4000000))
 
 
 #Solution 3
-# Other elegant mathematica solution using Binet-cauchi ecuation
+# Other elegant mathematica solution using Binet formula
+# http://mathworld.wolfram.com/BinetsFibonacciNumberFormula.html
+
 from math import sqrt
 
 def fibo_binet(n):
