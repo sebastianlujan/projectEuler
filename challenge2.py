@@ -43,8 +43,30 @@ print(fib(4000000))
 #fib, fnext, (fib+fnext), [ fib+2*fnext , 3*fib+2*fnext ], 3*fib+5*fnext , 5*fib+8*fnext ... 
 
 # in a nutshell: if fibo is even term E1 (fib+fnext),
-
 #use induction to next value:
 
 # fnext = 2*fib + fnext
 # fibo = 3*fibo+2*fnext
+
+
+
+#Solution 3
+# Other elegant mathematica solution using Binet-cauchi ecuation
+from math import sqrt
+
+def fibo_binet(n):
+	phi = (1+sqrt(5))/2
+	psi = 1/phi
+	return int((phi**n - psi**n)/sqrt(5)+1/2) 
+
+def even_fibo_binet(limit):
+	n, s = 1, 0
+	while fibo_binet(n) < limit:
+		if fibo_binet(n)%2 == 0:
+			s += fibo_binet(n)
+		n+=1
+	return s
+	
+print(even_fibo_binet(4000000))
+
+
