@@ -6,14 +6,14 @@
 
 def fib(n):
 	if n < 2:
-		return n 
+		return n
 	fibo, fibo_n, s = 0, 1, 0
+
 	while fibo < n:
 		ftemp = fibo + fibo_n
 		if not fibo % 2:
 			s+=fibo
-		fibo = fibo_n
-		fibo_n = ftemp
+		fibo_n , fibo = ftemp ,fibo_n
 	return s
 
 print(fib(4000000))
