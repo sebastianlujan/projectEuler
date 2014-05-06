@@ -21,18 +21,7 @@ print(fib(4000000))
 
 #Solution 2 #without fib mmod 2
 
-# Elegant mathematical solution #using fibonacci series property,
-# prop: Each third number is even:
-# 1 1  2 3 5  8 13 21 34 55 89 144
-# 0 0 E1[0 0 ]E2 0  0 E3  0  0  E4
-# the matematical series of fibonacci is:
-#fib, fnext, (fib+fnext), [((fib+fnext)+fnext ),((fib+fib+fnext)+fib+fnext) ],
-#fib, fnext, (fib+fnext), [ fib+2*fnext , 3*fib+2*fnext ], 3*fib+5*fnext , 5*fib+8*fnext ... 
-
-# in a nutshell: if fibo is even term E1 (fib+fnext),
-#use induction to next value:
-# fnext = 2*fib + fnext
-# fibo = 3*fibo+2*fnext
+# Elegant mathematical solution, using even terms series
 
 
 #Solution 2
@@ -45,3 +34,19 @@ def fib(n):
 		fibo_n ,fibo = 2*fibo + fibo_n, 3*fibo + 2*fibo_n
 	return s	
 print(fib(4000000))
+
+# prop: Each third number is even:
+
+# 1 1  2 3 5  8 13 21 34 55 89 144
+# 0 0 E1[0 0 ]E2 0  0 E3  0  0  E4
+
+# the matematical series of fibonacci is:
+#fib, fnext, (fib+fnext), [((fib+fnext)+fnext ),((fib+fib+fnext)+fib+fnext) ],
+#fib, fnext, (fib+fnext), [ fib+2*fnext , 3*fib+2*fnext ], 3*fib+5*fnext , 5*fib+8*fnext ... 
+
+# in a nutshell: if fibo is even term E1 (fib+fnext),
+
+#use induction to next value:
+
+# fnext = 2*fib + fnext
+# fibo = 3*fibo+2*fnext
